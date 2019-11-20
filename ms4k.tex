@@ -1,0 +1,245 @@
+\documentclass[man]{apa6}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{hyperref}
+\hypersetup{unicode=true,
+            pdftitle={A comparison of meta-analysis, mega-analysis, and a hybrid approach},
+            pdfauthor={Ezequiel Koile, Sho Tsuji, \& Alejandrina Cristia},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+%%% Use protect on footnotes to avoid problems with footnotes in titles
+\let\rmarkdownfootnote\footnote%
+\def\footnote{\protect\rmarkdownfootnote}
+
+
+  \title{A comparison of meta-analysis, mega-analysis, and a hybrid approach}
+    \author{Ezequiel Koile\textsuperscript{a}, Sho Tsuji\textsuperscript{b}, \&
+Alejandrina Cristia\textsuperscript{c}}
+    \date{}
+  
+\shorttitle{individual variation in infant speech processing}
+\affiliation{
+\vspace{0.5cm}
+\textsuperscript{a} ADD\\\textsuperscript{b} ADD\\\textsuperscript{c} ADD}
+\usepackage{csquotes}
+\usepackage{upgreek}
+\captionsetup{font=singlespacing,justification=justified}
+
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage[flushleft]{threeparttable}
+\usepackage{threeparttablex}
+
+\newenvironment{lltable}{\begin{landscape}\begin{center}\begin{ThreePartTable}}{\end{ThreePartTable}\end{center}\end{landscape}}
+
+\makeatletter
+\newcommand\LastLTentrywidth{1em}
+\newlength\longtablewidth
+\setlength{\longtablewidth}{1in}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+
+
+\DeclareDelayedFloatFlavor{ThreePartTable}{table}
+\DeclareDelayedFloatFlavor{lltable}{table}
+\DeclareDelayedFloatFlavor*{longtable}{table}
+\makeatletter
+\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
+\makeatother
+
+\authornote{
+
+Correspondence concerning this article should be addressed to Ezequiel
+Koile, ADD. E-mail: ADD}
+
+\abstract{
+Laboratory measures of infant speech perception have been central to the
+development of theories of infant language acquisition, and could be
+valuable predictors of important individual and group variation. A
+recent report suggests that these measures' psychometric properties may
+be limited, based on a meta-analytic analysis. We re-analyze those data
+using a mega-analytic approach, as well as a variety of hybrid
+approaches. We find that (a) the results of meta- and mega-analyses
+diverge significantly, and (b) a mega-analytic approach can be more
+powerful in detecting stability in performance across days. However,
+since it is often difficult to recover original data, we also explore a
+hybrid approach, in which some studies are represented by group
+statistics, and others by the original data, assessing to what extent
+biased data sharing may impact overall conclusions.
+
+
+}
+
+\begin{document}
+\maketitle
+
+\subsection{Rough paper outline}\label{rough-paper-outline}
+
+One paragraph per bullet point
+
+\begin{itemize}
+\item
+  infant speech perception measures have been central to the development
+  of theories of infant language acquisition, eg phonology \& lexicon
+  start developing before 1 year of age
+\item
+  infant speech perception measures could be valuable predictors of
+  important individual and group variation, eg correlations these \&
+  vocabulary or comparisons between groups at risk or not (Cristia et al
+  2013)
+\item
+  what are the psychometric properties? Psychometry is crucial -- eg
+  test-retest reliability gives upper bound on meaningful variance:
+  \enquote{the maximum validity of any measure is the square root of its
+  reliability}
+\item
+  only two studies published on test-retest of infant speech perception
+  measures, \& second contains data on first. Cristia et al use
+  meta-analytic method and find, across 12 studies, weighted median r of
+  zero
+\item
+  this means any correlation/intervention work using these measures is
+  suspect because they have virtually no good reliability
+\item
+  correlations within each study make sense, but do not capture same
+  information as correlations collapsing across studies; or considering
+  studies as structured
+\item
+  current trends in genetics \& brain studies pushing for mega-, over
+  meta-, analyses because structured sources of variance can be better
+  accounted for, and analyses may have more power
+\item
+  here, we reanalyze Cristia's data to revisit the question of
+  reliability, and ask
+\item
+  in mega-analysis, do you also find basically no prediction of test2
+  from test1?
+\item
+  how should structure be accounted for - are studies all different from
+  each other?
+\item
+  what happens if you only have some data from some studies -- picked at
+  random? (assuming original authors do not withhold the data for any
+  reason that is related to the data itself)
+\item
+  and if you only have data from large studies? (authors who ran more
+  babies are more motivated to share)
+\item
+  and if you only have data from studies with large main effects?
+  (defined as the average between effect at test1 and effect at test2 --
+  intuition is that authors with strong effects believe their data more)
+\item
+  and if you only have data from studies with large test-retest
+  correlations? (idea: authors who find reliability more likely to share
+  raw data)
+\end{itemize}
+
+\subsection{Methods}\label{methods}
+
+Very short because we refer to previous paper for full description of
+experiments
+
+table of experiments: short names, short description, N of children,
+mean age
+
+We got data from osf, using R, this paper uses Rmd in RStudio \& papaja
+for increased reproducibility.
+
+\subsection{Results}\label{results}
+
+\begin{itemize}
+\tightlist
+\item
+  how should structure be accounted for - are studies all different from
+  each other?
+\end{itemize}
+
+explain use of AIC to compare models, using also conceptual reasons to
+group studies -- ending up with 5 clusters
+
+\begin{itemize}
+\tightlist
+\item
+  in mega-analysis, do you also find basically no prediction of test2
+  from test1?
+\end{itemize}
+
+no, we get something pretty different. Explain why
+
+\begin{itemize}
+\tightlist
+\item
+  use a graph to represent all of the hybrid results (max 4k words!)
+\end{itemize}
+
+\subsection{Discussion}\label{discussion}
+
+\begin{itemize}
+\tightlist
+\item
+  under what conditions can we trust infant speech perception measures
+  of individual variation?
+\item
+  we recommend mega- over meta-analysis
+\item
+  explain under what conditions this holds, and when mega-analysis
+  provides biased view of data
+\end{itemize}
+
+\subsection{References}\label{references}
+
+\setlength{\parindent}{-0.5in} \setlength{\leftskip}{0.5in}
+
+
+\end{document}
