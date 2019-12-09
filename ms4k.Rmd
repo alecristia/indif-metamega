@@ -51,37 +51,24 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE, cache = FALSE, fig.pos =
 
 ```
 
-## Rough paper outline
+Recent years have seen the rise of cumulative science, in which each new result is integrated into the web of prior knowledge. In this paper, we introduce mega-analyses, a cumulative science method that is rare in the study of cognition. Mega-analyses involve integrated analyses of raw data collected in multiple sites using a single pre-processing and statistical analysis pipeline. They thus differ from simple analyses in the scope of the data, dealing with more heterogeneous sets since the sites may not have collected data in a coordinated manner; and from meta-analyses in that the raw data are inputed, rather than group-based statistics. We couch this presentation in the context of one case study to facilitate a discussion of in which contexts is a meta- or mega-analyses more appropriate tool in the context of cumulative science.
 
-One paragraph per bullet point
+## Study case: Reliability of infant speech perception measures
 
-- infant speech perception measures have been central to the development of theories of infant language acquisition, eg phonology & lexicon start developing before 1 year of age
+Infant speech perception measures have been central to the development of theories of language acquisition. For example, experimental measures showing that infants' perception for non-native contrasts varied between 6 and 12 months of age led to the conclusion that phonological acquisition begins as early as this [@werker1984cross]. More recently, these same measures have been argued to be valuable predictors of meaningful individual and group variation. @cristia2014predicting meta-analyzed 20 articles and theses reporting correlations between speech perception measures (including, for example, perception of non-native contrasts) and vocabulary; as well as work comparing performance in such tasks by infants at risk of a language disorder against infants not at risk. The authors concluded that individual and group variation was significantly associated with performance in infant speech perception tasks (median r=.31, 95% CI [.22, .40]), in line with the hypothesis that infant speech perception measures can provide an insight into individual infants' language skills. 
 
-- infant speech perception measures could be valuable predictors of important individual and group variation, eg correlations these & vocabulary or comparisons between groups at risk or not (Cristia et al 2013)
+One outstanding issue, however, concerns the psychometric properties of such measures, and in particular their reliability. We will call the correlation between two versions of a given measure (such as a test-retest correlation) its *reliability*; and the correlation between that measure and a measure of something else (a potential predictor or predicted variable) its *validity*. Demonstrations within classical test theory suggest that the validity of any measure is bounded by the square root of its reliability [e.g., @michell2003measurement].
 
-- what are the psychometric properties? Psychometry is crucial -- eg test-retest reliability gives upper bound on meaningful variance: "the maximum validity of any measure is the square root of its reliability" 
+Only two studies have been published reporting on test-retest correlations of infants undergoing the same speech perception measures twice [@houston2007assessing;@cristia2016test]. Since the later paper contains data on the first, we only discuss the later on. @cristia2016test used a meta-analytic method to combine the earlier results with test-retest data collected independently by three research labs (each of which carried out 3-5 studies), which did not know the others were also gathering the same kind of data. Meta-analytic methods seem to conceptually fit well the goal of integrating results in such a setting. Thus, the authors first estimated the test-retest correlation for each of the 12 studies [13 with @houston2007assessing], and then derived the overall estimate as the weighted median correlation. Surprisingly, this revealed an overall r=0.065, with a 95% confidence interval of [-0.12; 0.25]. This results was not just due to some of the studies providing very small correlation coefficients, but crucially because some of these coefficients were negative. 
 
-- only two studies published on test-retest of infant speech perception measures, & second contains data on first. Cristia et al use meta-analytic method and find, across 12 studies, weighted median r of zero
+If these results are to be believed, this means that correlation work reporting on these measures' validity (e.g., correlations with vocabulary estimates, group differences) is suspect, because the measures' null reliability would entail that no validity can be measured. @cristia2016test made the case that it was appropriate to integrate across all 13 studies because there was no reason to believe that test-retest would yield negative correlations. While this is true, calculating correlations as a measure of test-retest stability within each study and then averaging them is not equivalent to calculating test-retest stability in behavior taking all studies into account together.
 
-- this means any correlation/intervention work using these measures is suspect because they have virtually no good reliability
+In fact, genetics and neuroimaging research are seeing the emergence of work that discusses the benefits of considering raw data together in what are called mega-analyses [e.g., CITATIONS HERE]. Mega-analyses are generally preferrable over  meta-analyses because pre-processing steps can be done in a homogeneous fashion, removing this potential source of variance. As it happens, @cristia2016test pre-processed all data (except for the published study) in the same way, and thus this was not a consideration. Additionally, a second and crucial advantage of mega- over meta-analyses is that structured sources of variance can be better accounted for, and analyses therefore have more power to detect small and stable effects.
 
-- correlations within each study make sense, but do not capture same information as correlations collapsing across studies; or considering studies as structured
+## The present study
 
-- current trends in genetics & brain studies pushing for mega-, over meta-, analyses because structured sources of variance can be better accounted for, and analyses may have more power
+We reanalyze @cristia2016test's data to revisit the question of how reliable infant speech perception tasks are using a mega-analytic approach. We address this question first assuming that the analyzer has access to all data, which is the case here. This answer is most informative for readers that are  specifically interested in the question of reliability. We then make a few reasonable assumptions regarding data missingness. If starting a mega-analysis from scratch, the cumulative scientist may only have access to a subset of the raw data, with the remaining studies in the literature being represented by group-based summary statistics at best. Althow raw data may be missing at chance, we also contemplate three cases of biased missingness that would be due to selective reporting. First, we assume data would be missing for  studies with a small number of participants; second for studies with small main effects; and third for those with small or negative test-retest correlations (assuming that the original researchers finding themselves  in one of these situations may be less prone to make the additional effort of sharing the raw data).
 
-- here, we reanalyze Cristia's data to revisit the question of reliability, and ask
-
-- in mega-analysis, do you also find basically no prediction of test2 from test1?
-
-- how should structure be accounted for - are studies all different from each other?
-
-- what happens if you only have some data from some studies -- picked at random? (assuming original authors do not withhold the data for any reason that is related to the data itself)
-
-- and if you only have data from large studies? (authors who ran more babies are more motivated to share)
-
-- and if you only have data from studies with large main effects? (defined as the average between effect at test1 and effect at test2 -- intuition is that authors with strong effects believe their data more)
-
-- and if you only have data from studies with large test-retest correlations? (idea: authors who find reliability more likely to share raw data)
 
 
 ## Methods
@@ -101,6 +88,15 @@ explain use of AIC to compare models, using also conceptual reasons to group stu
 - in mega-analysis, do you also find basically no prediction of test2 from test1?
 
 no, we get something pretty different. Explain why
+
+
+- what happens if you only have some data from some studies -- picked at random? (assuming original authors do not withhold the data for any reason that is related to the data itself)
+
+- and if you only have data from large studies? (authors who ran more babies are more motivated to share)
+
+- and if you only have data from studies with large main effects? (defined as the average between effect at test1 and effect at test2 -- intuition is that authors with strong effects believe their data more)
+
+- and if you only have data from studies with large test-retest correlations? (idea: authors who find reliability more likely to share raw data)
 
 
 - use a graph to represent all of the hybrid results (max 4k words!)
